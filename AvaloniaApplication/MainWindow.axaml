@@ -1,0 +1,34 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AvaloniaApplication.MainWindow"
+        Title="AvaloniaApplication">
+    <Grid>
+        <Canvas Name="SimulationCanvas">
+            <!-- Tury symulacji będą rysowane dynamicznie w tym miejscu -->
+        </Canvas>
+        
+        <TextBlock Name="SimulationTimeTextBlock" 
+                   VerticalAlignment="Top" 
+                   HorizontalAlignment="Right" 
+                   Margin="10" 
+                   FontSize="16" 
+                   Foreground="white"/>
+        
+        <StackPanel 
+            VerticalAlignment="Bottom" 
+            HorizontalAlignment="Right" 
+            Margin="10" 
+            Orientation="Horizontal" 
+            Spacing="10">
+            <Button Name="SaveButton" 
+                    Content="Save State" 
+                    Click="OnSaveState"/>
+            <Button Name="RestoreButton" 
+                    Content="Restore State" 
+                    Click="OnRestoreState"/>
+        </StackPanel>
+    </Grid>
+</Window>
